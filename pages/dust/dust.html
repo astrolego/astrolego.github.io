@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Dust. v1</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
 <body>
-<h1>Dust.</h1>
-<a href="https://scratch.mit.edu/projects/429677557/">Start Game</a>
-<p>
-<a href="/index.html">Home</a>
-</p>
+
+<script type="text/javascript">
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+
+    var config = {
+        type: Phaser.AUTO,
+        width: w,
+        height: h,
+        scene: {
+            preload: preload,
+            create: create,
+            update: update
+        }
+    };
+
+    var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+		this.load.image('floors', 'assets/floors.png');
+		this.load.image('walls', 'assets/walls.png');
+    }
+
+    function create ()
+    {
+    }
+
+    function update ()
+    {
+    }
+
+</script>
+
 </body>
 </html>
